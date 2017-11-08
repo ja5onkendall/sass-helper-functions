@@ -8,17 +8,23 @@ $sides: (top, bottom, left, right);
         .p-#{str-slice($side, 0, 1)}-#{$space} {
             padding-#{$side}: #{$space}px !important;
         }
-        .w-#{str-slice($side, 0, 1)}-#{$space} {
-            padding-#{$side}: #{$space}px !important;
+        .w-#{$space} {
+            width: #{$space}px !important;
         }
-        .h-#{str-slice($side, 0, 1)}-#{$space} {
-            padding-#{$side}: #{$space}px !important;
+        .h-#{$space} {
+            height: #{$space}px !important;
         }
-        .max-w-#{str-slice($side, 0, 1)}-#{$space} {
-            padding-#{$side}: #{$space}px !important;
+        .min-w-#{$space} {
+            min-width: #{$space}px !important;
         }
-        .max-h-#{str-slice($side, 0, 1)}-#{$space} {
-            padding-#{$side}: #{$space}px !important;
+        .min-h-#{$space} {
+            min-height: #{$space}px !important;
+        }
+        .max-w-#{$space} {
+            max-width: #{$space}px !important;
+        }
+        .max-h-#{$space} {
+            max-height: #{$space}px !important;
         }
     }
 }
