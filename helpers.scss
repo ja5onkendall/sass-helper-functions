@@ -1,30 +1,48 @@
-$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 125, 150, 175, 200, 250, 300, 350, 400, 450, 500);
-$sides: (top, bottom, left, right);
-@each $space in $spaceamounts {
-    @each $side in $sides {
-        .m-#{str-slice($side, 0, 1)}-#{$space} {
-            margin-#{$side}: #{$space}px !important;
+    $spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 125, 150, 175, 200, 250, 300, 350, 400, 450, 500);
+    $sides: (top, bottom, left, right);
+    @each $space in $spaceamounts {
+        @each $side in $sides {
+            .m-#{str-slice($side, 0, 1)}-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+            .p-#{str-slice($side, 0, 1)}-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
         }
-        .p-#{str-slice($side, 0, 1)}-#{$space} {
-            padding-#{$side}: #{$space}px !important;
-        }
+    }
+
+    @each $space in $spaceamounts {
         .w-#{$space} {
             width: #{$space}px !important;
         }
+    }
+
+    @each $space in $spaceamounts {
         .h-#{$space} {
             height: #{$space}px !important;
         }
+    }
+
+    @each $space in $spaceamounts {
         .min-w-#{$space} {
             min-width: #{$space}px !important;
         }
+    }
+
+    @each $space in $spaceamounts {
         .min-h-#{$space} {
             min-height: #{$space}px !important;
         }
+    }
+
+    @each $space in $spaceamounts {
         .max-w-#{$space} {
             max-width: #{$space}px !important;
         }
+    }
+
+    @each $space in $spaceamounts {
         .max-h-#{$space} {
             max-height: #{$space}px !important;
         }
     }
-}
